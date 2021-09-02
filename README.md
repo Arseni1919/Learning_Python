@@ -1,6 +1,6 @@
 # Learning Python
 
-Some useful links that hrlped me to get better at python.
+Some useful links that helped me to get better at python.
 
 - [PyGame: A Primer on Game Programming in Python | RealPython](https://realpython.com/pygame-a-primer/#game-speed)
 - [Python Plotting With Matplotlib (Guide) | RealPython](https://realpython.com/python-matplotlib-guide/)
