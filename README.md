@@ -26,6 +26,99 @@ print('Is my function awesome? -->', func.is_awesome)
 # Accessing function attributes
 ```
 
+### For-else loop
+
+```python
+my_list = ['some', 'list', 'containing', 'five', 'elements']
+
+min_len = 3
+
+for element in my_list:
+    if len(element) < min_len:
+        print(f'Caught an element shorter than {min_len} letters')
+        break
+else:
+    print(f'All elements at least {min_len} letters long')
+```
+
+### Separators for ‘int’
+
+```python
+a = 3250
+b = 67_543_423_778 + 1
+c = 6_7_5_43_423_7_7_8 + 1
+
+print(type(a))
+print(type(b))
+
+print(a)
+print(b)
+```
+
+### eval() and exec()
+
+```python
+a = 3
+# c = 0
+b = eval('2 + a')
+
+exec('c = a + b')
+
+print(a)
+print(b)
+print(c)
+```
+
+### Ellipsis
+
+```python
+def foo():
+    pass
+
+
+def foo2():
+    ...
+
+###############################
+###############################
+
+def foo3(m=...):
+    if m is ...:
+        print(type(m))
+        print('nothing received')
+    elif m is None:
+        print('None')
+    else:
+        print(type(m))
+        print('another typy')
+
+
+foo3()
+
+###############################
+###############################
+
+import numpy as np
+
+a = np.arange(16).reshape((2, 2, 2, 2))
+
+print(a)
+print(a[..., 0].flatten())
+print(a[:, :, :, 0].flatten())
+
+###############################
+###############################
+
+if ...:
+    print('True')
+else:
+    print('False')
+
+###############################
+###############################
+print(...)
+```
+
 Some useful links that helped me to get better at python.
 
 - [PyGame: A Primer on Game Programming in Python | RealPython](https://realpython.com/pygame-a-primer/#game-speed)
