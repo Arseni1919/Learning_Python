@@ -128,6 +128,7 @@ Some useful links that helped me to get better at python.
 - [Introduction to Git and GitHub for Python Developers | RealPython](https://realpython.com/python-git-github-intro/)
 - [Python Command Line Arguments | RealPython](https://realpython.com/python-command-line-arguments/)
 - [Python Virtual Environments: A Primer | RealPython](https://realpython.com/python-virtual-environments-a-primer/)
+- [medium | 5 Python Features That I Was Unaware Even Existed](https://betterprogramming.pub/python-features-that-i-was-unaware-even-existed-8465a50a6378)
 
 
 
