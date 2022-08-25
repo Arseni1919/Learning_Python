@@ -1,5 +1,31 @@
 # Learning Python
 
+## Cool Features
+
+### Function Attributes
+
+```python
+def func(x):
+    intermediate_var = x**2 + x + 1
+
+    if intermediate_var % 2:
+        y = intermediate_var ** 3
+    else:
+        y = intermediate_var **3 + 1
+
+    # setting attributes here
+    func.optional_return = intermediate_var
+    func.is_awesome = 'Yes, my function is awesome.'
+
+    return y
+
+y = func(3)
+print('Final answer is', y)
+print('Show calculations -->', func.optional_return)
+print('Is my function awesome? -->', func.is_awesome)
+# Accessing function attributes
+```
+
 Some useful links that helped me to get better at python.
 
 - [PyGame: A Primer on Game Programming in Python | RealPython](https://realpython.com/pygame-a-primer/#game-speed)
