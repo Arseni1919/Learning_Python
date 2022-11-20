@@ -122,9 +122,76 @@ print(...)
 ### f-Strings
 
 ```python
-x = 5
-print(f'{x = }')
-# x = 5
+x = 10
+y = 20
+
+print(f"x = {x}, y = {y}") 
+print(f"{x = }, {y = }") 
+
+# math operations
+print(f"{x * y = }")
+
+# x = 10, y = 20
+# x = 10, y = 20
+# x * y = 200
+```
+Let’s say you have a large number, as large as Apple’s market cap; you can use :, where , is the separator.
+
+Or, if you want f string to print out a percentage value, you can use :.2% telling Python to set 2 decimal places and add a percentage sign to the end of the string.
+
+```python
+apple_marketcap = 2.626 * 10e12
+
+print(f"{apple_marketcap = :,}") # comma separator
+
+percentage = 10.394394
+
+print(f"{percentage = :.2%}") # percentage
+
+# apple_marketcap = 26,260,000,000,000.0
+# percentage = 1039.44%
+```
+
+Date formatting:
+
+```python
+import datetime
+
+today = datetime.datetime.utcnow()
+print(f"datetime : {today}\n")
+
+print(f"date time: {today:%m/%d/%Y %H:%M:%S}")
+print(f"date: {today:%m/%d/%Y}")
+print(f"time: {today:%H:%M:%S.%f}") 
+print(f"time: {today:%H:%M:%S %p}") 
+print(f"time: {today:%H:%M}")
+datetime : 2022-09-13 05:44:17.546036
+
+# date time: 09/13/2022 05:44:17
+# date: 09/13/2022
+# time: 05:44:17.546036
+# time: 05:44:17 AM
+# time: 05:44
+```
+
+```python
+# Locale’s appropriate date and time representation
+print(f"locale appropriate: {today:%c}")
+
+# weekday
+print(f"weekday: {today:%A}")
+
+# day of the year
+print(f"day of year: {today:%j}")
+
+# how far are we into the year?
+day_of_year = f"{today:%j}"
+print(f"progress % year: {int(day_of_year)/365 * 100:.2f}%")
+
+# locale appropriate: Tue Sep 13 05:44:17 2022
+# weekday: Tuesday
+# day of year: 256
+# progress % year: 70.14%
 ```
 
 Some useful links that helped me to get better at python.
