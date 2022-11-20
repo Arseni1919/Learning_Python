@@ -194,6 +194,83 @@ print(f"progress % year: {int(day_of_year)/365 * 100:.2f}%")
 # progress % year: 70.14%
 ```
 
+repr & str:
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class Person:
+    name : str
+    age : int
+
+    def __str__(self) -> str:
+        return f"{self.name} is {self.age} years old"
+
+Elon = Person("Elon Musk", 51)
+print(f"{Elon}") # str
+print(f"{Elon!r}") # repr
+Elon Musk is 51 years old
+Person(name='Elon Musk', age=51)
+```
+
+Alignment:
+
+```python
+number = 4
+print(f"number is {number:4}") # width of 10
+
+# numbers
+for number in range(1, 5):
+    print(f"the number is {number:{number}}")
+
+left = "left text"
+center = "center text!"
+right = "right text"
+
+print(f"{left:>20}") # left align
+print(f"{center:^20}") # center align
+print(f"{right:<20}") # right align
+
+print(f"{left : <20}{center : ^20}{right : >20}")
+number is    4
+the number is 1
+the number is  2
+the number is   3
+the number is    4
+           left text
+   center text!    
+right text          
+left text               center text!              right text
+Hosted on
+Deepnote
+
+```
+
+Multi-line f-string:
+
+```python
+company_name = "Tesla"
+employee_count = 100000
+mission = "To accelerate the world's transition to sustainable energy"
+
+print(f"""
+Company: {company_name}
+# of employees: {employee_count:,}
+Mission: {mission}
+""")
+
+Company: Tesla
+# of employees: 100,000
+Mission: To accelerate the world's transition to sustainable energy
+```
+
+
+```python
+
+```
+
+
 Some useful links that helped me to get better at python.
 
 - [PyGame: A Primer on Game Programming in Python | RealPython](https://realpython.com/pygame-a-primer/#game-speed)
@@ -204,6 +281,7 @@ Some useful links that helped me to get better at python.
 - [Python Command Line Arguments | RealPython](https://realpython.com/python-command-line-arguments/)
 - [Python Virtual Environments: A Primer | RealPython](https://realpython.com/python-virtual-environments-a-primer/)
 - [medium | 5 Python Features That I Was Unaware Even Existed](https://betterprogramming.pub/python-features-that-i-was-unaware-even-existed-8465a50a6378)
+- [medium | Python F-strings Tricks You Should Know](https://medium.com/bitgrit-data-science-publication/python-f-strings-tricks-you-should-know-7ce094a25d43)
 
 
 
