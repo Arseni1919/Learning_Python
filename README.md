@@ -119,6 +119,14 @@ else:
 print(...)
 ```
 
+### f-Strings
+
+```python
+x = 5
+print(f'{x = }')
+# x = 5
+```
+
 Some useful links that helped me to get better at python.
 
 - [PyGame: A Primer on Game Programming in Python | RealPython](https://realpython.com/pygame-a-primer/#game-speed)
